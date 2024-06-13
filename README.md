@@ -1,54 +1,104 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vbnbTt5m)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15269686&assignment_repo_type=AssignmentRepo)
-# Dev_Setup
-Setup Development Environment
+To prepare for my upcoming software engineering classes, I meticulously set up my coding environment. Here is a detailed account of the steps I followed:
 
-#Assignment: Setting Up Your Developer Environment
+# Operating System Installation
+The first step was to ensure my operating system was up-to-date. I opted for Windows 11, given its robust support for development tools and modern features.
 
-#Objective:
-This assignment aims to familiarize you with the tools and configurations necessary to set up an efficient developer environment for software engineering projects. Completing this assignment will give you the skills required to set up a robust and productive workspace conducive to coding, debugging, version control, and collaboration.
+1. I visited the [Windows 11 download page](https://www.microsoft.com/software-download/windows11).
+2. I downloaded the Installation Assistant and ran it.
+3. Following the on-screen instructions, I upgraded to Windows 11.
+4. After installation, I set up my user account and configured the initial settings to personalize my desktop environment.
 
-#Tasks:
+# Text Editor Installation
+Next, I installed Visual Studio Code, a powerful and versatile text editor suitable for various programming languages.
 
-1. Select Your Operating System (OS):
-   Choose an operating system that best suits your preferences and project requirements. Download and Install Windows 11. https://www.microsoft.com/software-download/windows11
+1. I went to the [Visual Studio Code download page](https://code.visualstudio.com/Download).
+2. I downloaded the Windows installer and ran it.
+3. During installation, I accepted the license agreement and chose the installation directory.
+4. Once installed, I launched Visual Studio Code and customized the settings to my liking, adjusting themes, font sizes, and layout.
 
-2. Install a Text Editor or Integrated Development Environment (IDE):
-   Select and install a text editor or IDE suitable for your programming languages and workflow. Download and Install Visual Studio Code. https://code.visualstudio.com/Download
-3. Set Up Version Control System:
-   Install Git and configure it on your local machine. Create a GitHub account for hosting your repositories. Initialize a Git repository for your project and make your first commit. https://github.com
+# Version Control System Setup
+Version control is crucial for managing code changes and collaboration. I set up Git and created a GitHub account.
 
-4. Install Necessary Programming Languages and Runtimes:
-  Instal Python from http://wwww.python.org programming language required for your project and install their respective compilers, interpreters, or runtimes. Ensure you have the necessary tools to build and execute your code.
+1. I downloaded Git from the [Git website](https://git-scm.com/downloads) and installed it.
+2. After installation, I opened Git Bash and configured my Git identity:
+   ```bash
+   git config --global user.name "ChaoKinyua"
+   git config --global user.email "ckinyua33@gmail.com"
+   ```
+3. I then created a GitHub account and a new repository on GitHub.
+4. In my local project directory, I initialized a Git repository:
+   ```bash
+   git init
+   git remote add origin https://github.com/yourusername/your-repository.git
+   ```
+5. I made my first commit and pushed it to GitHub:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin master
+   ```
 
-5. Install Package Managers:
-   If applicable, install package managers like pip (Python).
+# Programming Languages and Runtimes
+For my classes, Python was essential, so I installed it along with its package manager, pip.
 
-6. Configure a Database (MySQL):
-   Download and install MySQL database. https://dev.mysql.com/downloads/windows/installer/5.7.html
+1. I downloaded Python from [python.org](http://www.python.org) and ran the installer.
+2. I ensured that the "Add Python to PATH" option was checked during installation.
+3. To verify the installation, I opened Command Prompt and typed:
+   ```bash
 
-7. Set Up Development Environments and Virtualization (Optional):
-   Consider using virtualization tools like Docker or virtual machines to isolate project dependencies and ensure consistent environments across different machines.
+   python --version
+   ```
 
-8. Explore Extensions and Plugins:
-   Explore available extensions, plugins, and add-ons for your chosen text editor or IDE to enhance functionality, such as syntax highlighting, linting, code formatting, and version control integration.
+   This confirmed that Python was installed correctly.
 
-9. Document Your Setup:
-    Create a comprehensive document outlining the steps you've taken to set up your developer environment. Include any configurations, customizations, or troubleshooting steps encountered during the process. 
+# Package Manager Installation
+Pip, the package manager for Python, was included with the Python installation. I verified its installation as follows:
 
-#Deliverables:
-- Document detailing the setup process with step-by-step instructions and screenshots where necessary.
-- A GitHub repository containing a sample project initialized with Git and any necessary configuration files (e.g., .gitignore).
-- A reflection on the challenges faced during setup and strategies employed to overcome them.
+1. I opened Command Prompt and checked the pip version:
+   ```bash
+   pip --version
+   ```
+2. This confirmed that pip was installed and ready to manage Python packages.
 
-#Submission:
-Submit your document and GitHub repository link through the designated platform or email to the instructor by the specified deadline.
+# Database Configuration
+For database management, I chose MySQL. Here's how I set it up:
 
-#Evaluation Criteria:**
-- Completeness and accuracy of setup documentation.
-- Effectiveness of version control implementation.
-- Appropriateness of tools selected for the project requirements.
-- Clarity of reflection on challenges and solutions encountered.
-- Adherence to submission guidelines and deadlines.
+1. I downloaded the MySQL installer from the [MySQL website](https://dev.mysql.com/downloads/windows/installer/5.7.html).
+2. I ran the installer and selected the "Developer Default" setup type.
+3. Following the setup wizard, I configured the MySQL Server and Workbench.
+4. I set a root password during the setup process and completed the installation.
+5. Finally, I opened MySQL Workbench and connected to the MySQL server using the root account to ensure everything was functioning correctly.
 
-Note: Feel free to reach out for clarification or assistance with any aspect of the assignment.
+# Development Environments and Virtualization
+To enhance my development workflow, I considered Docker for containerization, ensuring consistent environments across different machines.
+
+1. I downloaded Docker Desktop from the [Docker website](https://www.docker.com/products/docker-desktop/) and installed it.
+2. After installation, I verified it by running:
+   ```bash
+   docker --version
+   ```
+3. Optionally, I pulled a sample Docker image to confirm that Docker was working correctly:
+   ```bash
+   docker run hello-world
+   ```
+
+# Extensions and Plugins
+To further optimize my development environment, I explored and installed several Visual Studio Code extensions.
+
+1. I opened Visual Studio Code and navigated to the Extensions view by clicking the Extensions icon in the Activity Bar.
+2. I searched for and installed the following recommended extensions:
+   - Python: For Python language support and tools.
+   - GitLens: To enhance Git capabilities within VS Code.
+   - Prettier - Code formatter: For automatic code formatting.
+   - MySQL: For managing MySQL databases directly from VS Code.
+
+# Reflection:
+# Challenges:
+Git Configuration: Initial configuration of Git and linking it with GitHub was challenging due to authentication issues.
+MySQL Installation: Setting up MySQL and configuring it properly took several attempts to ensure the service was running correctly.
+MYSQL also at first during the configuration couldn't excute the "starting server" command due to existing antiviruses in my PC.
+
+# Solutions:
+Git Authentication: Used SSH keys for secure and smooth authentication with GitHub.
+MySQL Troubleshooting: Followed official MySQL documentation and community forums to resolve configuration issues.
+I overrided the antivirus to install MYSQL.
